@@ -1,0 +1,7 @@
+{
+  "port": 3000,
+  "watch": true,
+  "static": "./static",
+  "no-cors": false,
+  "routes": "./mock/router.json"
+}

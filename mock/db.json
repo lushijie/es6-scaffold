@@ -1,0 +1,16 @@
+{
+  "posts": {
+    "errno": 0,
+    "errmsg": "Success",
+    "data": [
+      { "id": 1, "title": "json12-server", "author": "typicode" }
+    ]
+  },
+  "profile": {
+    "errno": 0,
+    "errmsg": "Success",
+    "data": {
+      "name": "typicode"
+    }
+  }
+}

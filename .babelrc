@@ -1,0 +1,9 @@
+{
+  "plugins": ['transform-runtime', 'transform-es2015-modules-commonjs'],
+  "presets": [
+    "es2015",
+    "stage-1"
+  ],
+  "env": {
+  }
+}
