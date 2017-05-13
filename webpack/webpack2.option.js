@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-05-12 14:01:17
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-05-12 18:57:26
+* @Last Modified time: 2017-05-13 09:13:17
 */
 const path = require('path');
 const argv = require('yargs').argv;
@@ -30,12 +30,19 @@ let htmlPluginOptions = [
 ];
 
 let definePluginOptions = {
-  ENV: {
-    API: JSON.stringify(isDev ? 'http://127.0.0.1' : 'http://online.com')
+  development: {
+    ENV: {
+      API: JSON.stringify('http://127.0.0.1')
+    }
+  },
+  production: {
+    ENV: {
+      API: JSON.stringify('http://online.com')
+    }
   }
 };
 
 module.exports = {
   htmlPluginOptions,
-  definePluginOptions
+  definePluginOptions: definePluginOptions[argv.env]
 };
