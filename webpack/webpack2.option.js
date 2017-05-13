@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-05-12 14:01:17
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-05-13 09:13:17
+* @Last Modified time: 2017-05-13 09:28:50
 */
 const path = require('path');
 const argv = require('yargs').argv;
@@ -42,7 +42,21 @@ let definePluginOptions = {
   }
 };
 
+function stringifyString(obj) {
+  let keys = Object.keys(obj);
+  for(let i = 0; i < keys.length; i++) {
+    let key = keys[i];
+    let tmp = obj[key];
+    if(typeof tmp === 'string') {
+      obj[key] = JSON.stringify(tmp);
+    }else if(Object.prototype.toString.call(tmp) === '[object Object]') {
+      stringifyString(tmp);
+    }
+  }
+  return obj;
+}
+
 module.exports = {
   htmlPluginOptions,
-  definePluginOptions: definePluginOptions[argv.env]
+  definePluginOptions: stringifyString(definePluginOptions[argv.env])
 };
