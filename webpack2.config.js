@@ -2,13 +2,13 @@
 * @Author: lushijie
 * @Date:   2017-05-12 14:00:40
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-05-12 19:04:00
+* @Last Modified time: 2017-05-15 09:57:53
 */
 let webpack = require('webpack');
 let path = require('path');
 let STATIC_ROOT = path.join(__dirname, 'www/static');
-let OPTIONS = require('./webpack/webpack2.option.js');
-let PLUGINS = require('./webpack/webpack2.plugin.js');
+let OPTIONS = require('./webpack/webpack2.options.js');
+let PLUGINS = require('./webpack/webpack2.plugins.js');
 let argv = require('yargs').argv;
 const isDev = (argv.env === 'development');
 
