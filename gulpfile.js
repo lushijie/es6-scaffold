@@ -2,7 +2,7 @@
 * @Author: lushijie
 * @Date:   2017-05-16 16:41:23
 * @Last Modified by:   lushijie
-* @Last Modified time: 2017-05-16 16:43:01
+* @Last Modified time: 2017-05-16 16:43:44
 */
 // git config core.filemode false
 
@@ -13,7 +13,6 @@ const chalk = require('chalk');
 const shell = require('gulp-shell');
 const runSequence = require('gulp-run-sequence');
 const argv = require('yargs').argv;
-const os = require('os');
 const gutil = require('gulp-util');
 
 const webpackConfig = require('./webpack2.config.js');
